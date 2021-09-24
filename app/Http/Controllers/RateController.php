@@ -18,17 +18,14 @@ class RateController extends Controller
         return view('content', compact('rates'));
     }
 
-    private function timeToUpdateDB() {
+    private function isTimeToUpdateDB() {
         $lastUpdatedDate = Rate::all('date')->max('date');
-        $today = Carbon::today();
-        $lastUpdated = Carbon::parse($lastUpdatedDate);
-        return ($lastUpdated < $today);
-
+        return (Carbon::parse($lastUpdatedDate) < Carbon::today());
     }
 
     private function updateDB()
     {
-        if($this->timeToUpdateDB()) {
+        if($this->isTimeToUpdateDB()) {
             try {
                 $allCurrency = Parser::getCurrency();
                 Rate::updateDB($allCurrency);

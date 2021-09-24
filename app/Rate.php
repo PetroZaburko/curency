@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 use Jenssegers\Mongodb\Eloquent\Model;
 
 class Rate extends Model
@@ -25,10 +24,5 @@ class Rate extends Model
     public static function updateDB($date) {
         self::truncate();
         self::saveAll($date);
-    }
-
-    public function test()
-    {
-        return $this->all();
     }
 }

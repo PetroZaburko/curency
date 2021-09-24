@@ -13,16 +13,21 @@ class Currency
     protected $client;
     protected $version;
 
+    /**
+     * Currency constructor.
+     */
     public function __construct()
     {
-        $this->client = new Client(['base_uri' => config('currency.base_uri')]);
-        $this->version = config('currency.api_version');
+        if (is_null($this->client) && is_null($this->version)) {
+            $this->client = new Client(['base_uri' => config('currency.base_uri')]);
+            $this->version = config('currency.api_version');
+        }
     }
 
     /**
      * @param null $date
      * @param null $valcode
-     * @return mixed
+     * @return array
      * @throws CurrencyException
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
