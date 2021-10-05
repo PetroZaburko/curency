@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/test', 'RateController@index');
-Route::get('/date', 'RateController@date');
-Route::get('/json', 'RateController@json');
+
+Route::get('/', 'RateController@index');
+//Route::get('/date', 'RateController@date');
+//Route::get('/json', 'RateController@json');
