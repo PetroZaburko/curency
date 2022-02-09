@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Token;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Sanctum\Sanctum;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        JsonResource::withoutWrapping();
+        Sanctum::usePersonalAccessTokenModel(Token::class);
     }
 }

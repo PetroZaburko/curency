@@ -5,11 +5,16 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Jenssegers\Mongodb\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\HybridRelations;
+use Laravel\Sanctum\HasApiTokens;
+
+//use Jenssegers\Mongodb\Eloquent\Model;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HybridRelations, HasApiTokens;
+
+    protected $connection = 'mysql';
 
     /**
      * The attributes that are mass assignable.
@@ -37,4 +42,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }

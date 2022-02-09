@@ -2,27 +2,45 @@
 
 namespace App;
 
+use App\Services\Currency;
+use Carbon\Carbon;
+use App\Services\CurrencyCollection;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 class Rate extends Model
 {
-    protected $fillable = ['r030', 'txt', 'rate', 'cc', 'exchangedate'];
+    const UPDATED_AT = null;
 
-    public static function saveAll($date)
+    protected $fillable = ['code', 'name', 'currency', 'rate', 'date'];
+    protected $connection = 'mongodb';
+
+
+    public function setCreatedAt($value)
     {
-        foreach ($date as $currency) {
-            $rate = new static();
-            $rate->_id = $currency['r030'];
-            $rate->name = $currency['txt'];
-            $rate->code = $currency['cc'];
-            $rate->rate = $currency['rate'];
-            $rate->date = $currency['exchangedate'];
-            $rate->save();
+        $this->created_at = Carbon::now()->second(0);
+        return $this;
+    }
+
+    public static function allLastUpdated()
+    {
+        return self::where('created_at', self::max('created_at')->toDateTime())->get();
+    }
+
+    public static function saveAll(CurrencyCollection $collection)
+    {
+        foreach ($collection as $element) {
+            self::saveOne($element);
         }
     }
 
-    public static function updateDB($date) {
-        self::truncate();
-        self::saveAll($date);
+    protected static function saveOne(Currency $element)
+    {
+        $rate = new static();
+        $rate->code = $element->getCode();
+        $rate->name = $element->getName();
+        $rate->currency = $element->getCurrency();
+        $rate->rate = $element->getRate();
+        $rate->date = $element->getDate();
+        $rate->save();
     }
 }

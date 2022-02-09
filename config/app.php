@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\CurrencyServiceProvider::class,
+//        App\Providers\TestServiceProvider::class,
 
     ],
 
@@ -229,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        'Parser' => \App\Facades\Parser::class,
+//        'Parser' => \App\Facades\Parser::class,
 
     ],
 
