@@ -10,24 +10,31 @@
             <thead class="thead-light">
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Key</th>
+                    <th scope="col">Progress</th>
                     <th scope="col">Usage</th>
                     <th scope="col">Created</th>
                     <th scope="col">Last used</th>
-                    <th scope="col">Deactive</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
             @foreach($tokens as $token)
                 <tr>
                     <td>{{$token->name}}</td>
-                    <td>{{$token->token}}</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: {{ $token->usage * 100 / $token->tariff->requests }}%" aria-valuenow="{{ $token->usage }}" aria-valuemin="0" aria-valuemax="{{ $token->tariff->requests }}"></div>
+                        </div>
+                    </td>
                     <td>{{$token->usage . ' - ' . $token->tariff->requests}}</td>
-                    <td>{{$token->createdFormat()}}</td>
-                    <td>{{$token->lastUsedFormat()}}</td>
+                    <td>{{$token->created}}</td>
+                    <td>{{$token->last_used}}</td>
                     <td>
                         <button type="button" class="btn btn-danger">
-                            <i class="fas fa-minus-circle"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="location.href = '{{route('regenerate', $token->id)}}';">
+                            <i class="fas fa-sync"></i>
                         </button>
                     </td>
                 </tr>
@@ -35,5 +42,4 @@
             </tbody>
         </table>
     </div>
-
 @endsection

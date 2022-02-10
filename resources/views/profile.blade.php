@@ -15,7 +15,7 @@
                 <i class="fas fa-lock"></i>
                 Change password
             </button>
-            <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('apikey')}}';">
+            <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('tokens')}}';">
                 <i class="fas fa-key"></i>
                 Api key
             </button>

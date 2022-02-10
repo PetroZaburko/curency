@@ -30,16 +30,17 @@ class PrivatBank extends CurrencyService
             if ($element['currency'] == 'UAH') {
                 continue;
             }
-            foreach ($this->currency_codes as $code => $value) {
+            foreach ($this->currency_codes as $iso_code => $value) {
                 if ($element['currency'] == $value['Code']) {
                     $name = $value['Name'];
-                    $currency = $element['currency'];
+                    $currency_code = $element['currency'];
                     $rate = isset($element['saleRate']) ? $element['saleRate'] : $element['saleRateNB'];
                     $date = $data['date'];
-                    $this->collection->addElement($code, $name, $currency, $rate, $date);
+                    $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
                 }
             }
         }
+        $this->collection->addUahElement();
         return $this->collection;
     }
 

@@ -7,7 +7,13 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class RateCollection extends ResourceCollection
 {
+    protected $baseCurrency;
 
+    public function __construct($resource, $baseCurrency = 'UAH')
+    {
+        parent::__construct($resource);
+        $this->baseCurrency = $baseCurrency;
+    }
 
     /**
      * Transform the resource collection into an array.
@@ -19,14 +25,17 @@ class RateCollection extends ResourceCollection
     {
         return [
             'date' => Carbon::today()->format('d.m.Y'),
-            'base' => 'UAH',
+            'timestamp' => Carbon::today()->timestamp,
+            'base' => $this->baseCurrency,
             'rates' => $this->collection->map->only([
-                'code',
+                'iso_code',
                 'name',
-                'currency',
+                'currency_code',
                 'rate'
             ]),
         ];
 //        return parent::toArray($request);
     }
+
+
 }

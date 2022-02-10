@@ -27,14 +27,15 @@ class MonoBank extends CurrencyService
                 if (!isset($this->currency_codes[$element['currencyCodeA']])) {
                     continue;
                 }
-                $code = $element['currencyCodeA'];
+                $iso_code = $element['currencyCodeA'];
                 $name = $this->currency_codes[$element['currencyCodeA']]['Name'];
-                $currency = $this->currency_codes[$element['currencyCodeA']]['Code'];
+                $currency_code = $this->currency_codes[$element['currencyCodeA']]['Code'];
                 $rate = isset($element['rateSell']) ? $element['rateSell'] : $element['rateCross'];
                 $date = Carbon::parse((int)$element['date'])->format('d.m.Y');
-                $this->collection->addElement($code, $name, $currency, $rate, $date);
+                $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
             }
         }
+        $this->collection->addUahElement();
         return $this->collection;
     }
 

@@ -13,13 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware'=> ['auth:sanctum', 'token.usage']], function () {
+    Route::get('/{base?}', 'ApiRateController@index');
 });
-
-Route::get('/', 'ApiRateController@index')->name('all');
-Route::get('/one', 'ApiRateController@one')->name('one');
-
-//Route::get('/', function (){
-//    return \App\Rate::all();
-//});

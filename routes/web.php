@@ -21,7 +21,8 @@ Route::group(['middleware' => 'guest'], function (){
 Route::group(['middleware' => 'auth'], function() {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
     Route::view('profile', 'profile')->name('profile');
-    Route::get('apikey', 'UserController@apikey')->name('apikey');
+    Route::get('tokens', 'UserController@tokens')->name('tokens');
+    Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');
 });
 
 

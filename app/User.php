@@ -8,8 +8,6 @@ use Illuminate\Notifications\Notifiable;
 use Jenssegers\Mongodb\Eloquent\HybridRelations;
 use Laravel\Sanctum\HasApiTokens;
 
-//use Jenssegers\Mongodb\Eloquent\Model;
-
 class User extends Authenticatable
 {
     use Notifiable, HybridRelations, HasApiTokens;
@@ -42,6 +40,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
 
 }

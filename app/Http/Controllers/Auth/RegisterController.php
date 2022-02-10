@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -64,12 +65,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /**
+         * @var $user User
+         */
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        $user->createToken('ApiKey');
+        $token = $user->createToken('ApiKey')->plainTextToken;
+        Session::put('error', 'Please keep the token key in a safe place as it will not be shown again : ' . $token);
         return $user;
     }
 }

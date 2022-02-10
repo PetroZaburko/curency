@@ -6,24 +6,24 @@ namespace App\Services;
 
 class Currency
 {
-    private $code;
+    private $iso_code;
     private $name;
-    private $currency;
+    private $currency_code;
     private $rate;
     private $date;
 
-    public function __construct($code, $name, $currency, $rate, $date)
+    public function __construct($iso_code, $name, $currency_code, $rate, $date)
     {
-        $this->code = $code;
+        $this->iso_code = $iso_code;
         $this->name = $name;
-        $this->currency = $currency;
+        $this->currency_code = $currency_code;
         $this->rate = $rate;
         $this->date = $date;
     }
 
-    public function getCode()
+    public function getIsoCode()
     {
-        return $this->code;
+        return $this->iso_code;
     }
 
     public function getName()
@@ -31,9 +31,9 @@ class Currency
         return $this->name;
     }
 
-    public function getCurrency()
+    public function getCurrencyCode()
     {
-        return $this->currency;
+        return $this->currency_code;
     }
 
     public function getRate()

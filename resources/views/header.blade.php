@@ -58,7 +58,6 @@
                     Register
                 </button>
             @else
-                {{--                @auth()--}}
                 <button id="logout" type="button" class="btn btn-light " data-toggle="modal" data-target="#logoutModalWindow">
                     <i class="fas fa-sign-out-alt"></i>
                     Logout
@@ -69,6 +68,5 @@
                 </button>
             @endguest
         </div>
-        {{--                    <div class="clearfix"></div>--}}
     </div>
 </header>

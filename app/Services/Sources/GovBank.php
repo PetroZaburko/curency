@@ -26,13 +26,14 @@ class GovBank extends CurrencyService
             if (!isset($this->currency_codes[$element['r030']])) {
                 continue;
             }
-            $code = $element['r030'];
+            $iso_code = $element['r030'];
             $name = $this->currency_codes[$element['r030']]['Name'];
-            $currency= $element['cc'];
+            $currency_code= $element['cc'];
             $rate = $element['rate'];
             $date = $element['exchangedate'];
-            $this->collection->addElement($code, $name, $currency, $rate, $date);
+            $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
         }
+        $this->collection->addUahElement();
         return $this->collection;
     }
 
