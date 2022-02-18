@@ -1,500 +1,625 @@
 <?php
 
 return [
-    971 =>[
-        'Code' => 'AFA',
-        'Name' => 'Afghan Afghani',
-    ],
-    533 => [
-        'Code' => 'AWG',
-        'Name' => 'Aruban Florin',
-    ],
-    36 => [
-        'Code' => 'AUD',
-        'Name' => 'Australian Dollars',
-    ],
-    32 => [
-        'Code' => 'ARS',
-        'Name' => 'Argentine Pes',
-    ],
-    944 => [
-        'Code' => 'AZN',
-        'Name' => 'Azerbaijanian Manat',
-    ],
-    44 => [
-        'Code' => 'BSD',
-        'Name' => 'Bahamian Dollar',
-    ],
-    50 => [
-        'Code' => 'BDT',
-        'Name' => 'Bangladeshi Taka',
-    ],
-    52 => [
-        'Code' => 'BBD',
-        'Name' => 'Barbados Dollar',
-    ],
-    974 => [
-        'Code' => 'BYR',
-        'Name' => 'Belarussian Rouble',
-    ],
-    68 => [
-        'Code' => 'BOB',
-        'Name' => 'Bolivian Boliviano',
-    ],
-    986 => [
-        'Code' => 'BRL',
-        'Name' => 'Brazilian Real',
-    ],
-    826 => [
-        'Code' => 'GBP',
-        'Name' => 'British Pounds Sterling',
-    ],
-    975 => [
-        'Code' => 'BGN',
-        'Name' => 'Bulgarian Lev',
-    ],
-    116 => [
-        'Code' => 'KHR',
-        'Name' => 'Cambodia Riel',
-    ],
-    124 => [
-        'Code' => 'CAD',
-        'Name' => 'Canadian Dollars',
-    ],
-    136 => [
-        'Code' => 'KYD',
-        'Name' => 'Cayman Islands Dollar',
-    ],
-    152 => [
-        'Code' => 'CLP',
-        'Name' => 'Chilean Peso',
-    ],
-    156 => [
-        'Code' => 'CNY',
-        'Name' => 'Chinese Renminbi Yuan',
-    ],
-    170 => [
-        'Code' => 'COP',
-        'Name' => 'Colombian Peso',
-    ],
-    188 => [
-        'Code' => 'CRC',
-        'Name' => 'Costa Rican Colon',
-    ],
-    191 => [
-        'Code' => 'HRK',
-        'Name' => 'Croatia Kuna',
-    ],
-    196 => [
-        'Code' => 'CPY',
-        'Name' => 'Cypriot Pounds',
-    ],
-    203 => [
-        'Code' => 'CZK',
-        'Name' => 'Czech Koruna',
-    ],
-    208 => [
-        'Code' => 'DKK',
-        'Name' => 'Danish Krone',
-    ],
-    214 => [
-        'Code' => 'DOP',
-        'Name' => 'Dominican Republic Peso',
-    ],
-    951 => [
-        'Code' => 'XCD',
-        'Name' => 'East Caribbean Dollar',
-    ],
-    818 => [
-        'Code' => 'EGP',
-        'Name' => 'Egyptian Pound',
-    ],
-    232 => [
-        'Code' => 'ERN',
-        'Name' => 'Eritrean Nakfa',
-    ],
-    233 => [
-        'Code' => 'EEK',
-        'Name' => 'Estonia Kroon',
-    ],
-    978 => [
-        'Code' => 'EUR',
-        'Name' => 'Euro',
-    ],
-    981 => [
-        'Code' => 'GEL',
-        'Name' => 'Georgian Lari',
-    ],
-    288 => [
-        'Code' => 'GHC',
-        'Name' => 'Ghana Cedi',
-    ],
-    292 => [
-        'Code' => 'GIP',
-        'Name' => 'Gibraltar Pound',
-    ],
-    320 => [
-        'Code' => 'GTQ',
-        'Name' => 'Guatemala Quetzal',
-    ],
-    340 => [
-        'Code' => 'HNL',
-        'Name' => 'Honduras Lempira',
-    ],
-    344 => [
-        'Code' => 'HKD',
-        'Name' => 'Hong Kong Dollars',
-    ],
-    348 => [
-        'Code' => 'HUF',
-        'Name' => 'Hungary Forint',
-    ],
-    352 => [
-        'Code' => 'ISK',
-        'Name' => 'Icelandic Krona',
-    ],
-    356 => [
-        'Code' => 'INR',
-        'Name' => 'Indian Rupee',
-    ],
-    360 => [
-        'Code' => 'IDR',
-        'Name' => 'Indonesia Rupiah',
-    ],
-    376 => [
-        'Code' => 'ILS',
-        'Name' => 'Israel Shekel',
-    ],
-    388 => [
-        'Code' => 'JMD',
-        'Name' => 'Jamaican Dollar',
-    ],
-    392 => [
-        'Code' => 'JPY',
-        'Name' => 'Japanese yen',
-    ],
-    368 => [
-        'Code' => 'IQD',
-        'Name' => 'Iraqi Dinar',
-    ],
-    404 => [
-        'Code' => 'KES',
-        'Name' => 'Kenyan Shilling',
-    ],
-    414 => [
-        'Code' => 'KWD',
-        'Name' => 'Kuwaiti Dinar',
-    ],
-    428 => [
-        'Code' => 'LVL',
-        'Name' => 'Latvia Lat',
-    ],
-    422 => [
-        'Code' => 'LBP',
-        'Name' => 'Lebanese Pound',
-    ],
-    440 => [
-        'Code' => 'LTL',
-        'Name' => 'Lithuania Litas',
-    ],
-    446 => [
-        'Code' => 'MOP',
-        'Name' => 'Macau Pataca',
-    ],
-    807 => [
-        'Code' => 'MKD',
-        'Name' => 'Macedonian Denar',
-    ],
-    969 => [
-        'Code' => 'MGA',
-        'Name' => 'Malagascy Ariary',
-    ],
-    458 => [
-        'Code' => 'MYR',
-        'Name' => 'Malaysian Ringgit',
-    ],
-    470 => [
-        'Code' => 'MTL',
-        'Name' => 'Maltese Lira',
-    ],
-    977 => [
-        'Code' => 'BAM',
-        'Name' => 'Marka',
-    ],
-    480 => [
-        'Code' => 'MUR',
-        'Name' => 'Mauritius Rupee',
-    ],
-    484 => [
-        'Code' => 'MXN',
-        'Name' => 'Mexican Pesos',
-    ],
-    508 => [
-        'Code' => 'MZM',
-        'Name' => 'Mozambique Metical',
-    ],
-    524 => [
-        'Code' => 'NPR',
-        'Name' => 'Nepalese Rupee',
-    ],
-    532 => [
-        'Code' => 'ANG',
-        'Name' => 'Netherlands Antilles Guilder',
-    ],
-    901 => [
-        'Code' => 'TWD',
-        'Name' => 'New Taiwanese Dollars',
-    ],
-    554 => [
-        'Code' => 'NZD',
-        'Name' => 'New Zealand Dollars',
-    ],
-    558 => [
-        'Code' => 'NIO',
-        'Name' => 'Nicaragua Cordoba',
-    ],
-    566 => [
-        'Code' => 'NGN',
-        'Name' => 'Nigeria Naira',
-    ],
-    408 => [
-        'Code' => 'KPW',
-        'Name' => 'North Korean Won',
-    ],
-    578 => [
-        'Code' => 'NOK',
-        'Name' => 'Norwegian Krone',
-    ],
-    512 => [
-        'Code' => 'OMR',
-        'Name' => 'Omani Riyal',
-    ],
-    586 => [
-        'Code' => 'PKR',
-        'Name' => 'Pakistani Rupee',
-    ],
-    600 => [
-        'Code' => 'PYG',
-        'Name' => 'Paraguay Guarani',
-    ],
-    604 => [
-        'Code' => 'PEN',
-        'Name' => 'Peru New Sol',
-    ],
-    608 => [
-        'Code' => 'PHP',
-        'Name' => 'Philippine Pesos',
-    ],
-    634 => [
-        'Code' => 'QAR',
-        'Name' => 'Qatari Riyal',
-    ],
-    946 => [
-        'Code' => 'RON',
-        'Name' => 'Romanian New Leu',
-    ],
-    643 => [
-        'Code' => 'RUB',
-        'Name' => 'Russian Federation Ruble',
-    ],
-    682 => [
-        'Code' => 'SAR',
-        'Name' => 'Saudi Riyal',
-    ],
-    891 => [
-        'Code' => 'CSD',
-        'Name' => 'Serbian Dinar',
-    ],
-    690 => [
-        'Code' => 'SCR',
-        'Name' => 'Seychelles Rupee',
-    ],
-    702 => [
-        'Code' => 'SGD',
-        'Name' => 'Singapore Dollars',
-    ],
-    703 => [
-        'Code' => 'SKK',
-        'Name' => 'Slovak Koruna',
-    ],
-    705 => [
-        'Code' => 'SIT',
-        'Name' => 'Slovenia Tolar',
-    ],
-    710 => [
-        'Code' => 'ZAR',
-        'Name' => 'South African Rand',
-    ],
-    410 => [
-        'Code' => 'KRW',
-        'Name' => 'South Korean Won',
-    ],
-    144 => [
-        'Code' => 'LKR',
-        'Name' => 'Sri Lankan Rupee',
-    ],
-    968 => [
-        'Code' => 'SRD',
-        'Name' => 'Surinam Dollar',
-    ],
-    752 => [
-        'Code' => 'SEK',
-        'Name' => 'Swedish Krona',
-    ],
-    756 => [
-        'Code' => 'CHF',
-        'Name' => 'Swiss Francs',
-    ],
-    834 => [
-        'Code' => 'TZS',
-        'Name' => 'Tanzanian Shilling',
-    ],
-    764 => [
-        'Code' => 'THB',
-        'Name' => 'Thai Baht',
-    ],
-    780 => [
-        'Code' => 'TTD',
-        'Name' => 'Trinidad and Tobago Dollar',
-    ],
-    949 => [
-        'Code' => 'TRY',
-        'Name' => 'Turkish New Lira',
-    ],
-    784 => [
-        'Code' => 'AED',
-        'Name' => 'UAE Dirham',
-    ],
-    840 => [
-        'Code' => 'USD',
-        'Name' => 'US Dollars',
-    ],
-    800 => [
-        'Code' => 'UGX',
-        'Name' => 'Ugandian Shilling',
-    ],
-    980 => [
-        'Code' => 'UAH',
-        'Name' => 'Ukraine Hryvna',
-    ],
-    858 => [
-        'Code' => 'UYU',
-        'Name' => 'Uruguayan Peso',
-    ],
-    860 => [
-        'Code' => 'UZS',
-        'Name' => 'Uzbekistani Som',
-    ],
-    862 => [
-        'Code' => 'VEB',
-        'Name' => 'Venezuela Bolivar',
-    ],
-    704 => [
-        'Code' => 'VND',
-        'Name' => 'Vietnam Dong',
-    ],
-    894 => [
-        'Code' => 'AMK',
-        'Name' => 'Zambian Kwacha',
-    ],
-    716 => [
-        'Code' => 'ZWD',
-        'Name' => 'Zimbabwe Dollar',
-    ],
-    8 => [
-        'Code' => 'ALL',
-        'Name' => 'Albanian Lek',
-    ],
-    51 => [
-        'Code' => 'AMD',
-        'Name' => 'Armenian Dram',
-    ],
-    973 => [
-        'Code' => 'AOA',
-        'Name' => 'Angolas Kvanza',
-    ],
-    48 => [
-        'Code' => 'BHD',
-        'Name' => 'Bahraini Dinar',
-    ],
-    108 => [
-        'Code' => 'BIF',
-        'Name' => 'Burundian Franc',
-    ],
-    96 => [
-        'Code' => 'BND',
-        'Name' => 'Brunei Dollar',
-    ],
-    398 => [
-        'Code' => 'KZT',
-        'Name' => 'Tenge'
-    ],
-    498 => [
-        'Code' => 'MDL',
-        'Name' => 'Moldovan Leu'
-    ],
-    933 => [
-        'Code' => 'BYN',
-        'Name' => 'Belarusian Ruble'
-    ],
-    960 => [
-        'Code' => 'XDR',
-        'Name' => 'Special Drawing Rights'
-    ],
-    985 => [
-        'Code' => 'PLN',
-        'Name' => 'Zloty'
-    ],
-    12 => [
-        'Code' => 'DZD',
-        'Name' => 'Algerian Dinar'
-    ],
-    364 => [
-        'Code' => 'IRR',
-        'Name' => 'Iranian Rial'
-    ],
-    417 => [
-        'Code' => 'KGS',
-        'Name' => 'Kyrgyzstan Som'
-    ],
-    434 => [
-        'Code' => 'LYD',
-        'Name' => 'Libyan Dinar'
-    ],
-    504 => [
-        'Code' => 'MAD',
-        'Name' => 'Moroccan Dirham'
-    ],
-    788 => [
-        'Code' => 'TND',
-        'Name' => 'Tunisian Dinar'
-    ],
-    934 => [
-        'Code' => 'TMT',
-        'Name' => 'Turkmenistan Manat'
-    ],
-    941 => [
-        'Code' => 'RSD',
-        'Name' => 'Serbian Dinar'
-    ],
-    972 => [
-        'Code' => 'TJS',
-        'Name' => 'Somoni'
-    ],
-    959 => [
-        'Code' => 'XAU',
-        'Name' => 'Gold'
-    ],
-    961 => [
-        'Code' => 'XAG',
-        'Name' => 'Silver'
-    ],
-    962 => [
-        'Code' => 'XPT',
-        'Name' => 'Platinum'
-    ],
-    964 => [
-        'Code' => 'XPD',
-        'Name' => 'Palladium'
+    [
+        'iso_code' => 971,
+        'name' => 'Afghan Afghani',
+        'currency_code' => 'AFA',
+    ],
+    [
+        'iso_code' => 533,
+        'name' => 'Aruban Florin',
+        'currency_code' => 'AWG',
+    ],
+    [
+        'iso_code' => 36,
+        'name' => 'Australian Dollars',
+        'currency_code' => 'AUD',
+    ],
+    [
+        'iso_code' => 32,
+        'name' => 'Argentine Pes',
+        'currency_code' => 'ARS',
+    ],
+    [
+        'iso_code' => 944,
+        'name' => 'Azerbaijanian Manat',
+        'currency_code' => 'AZN',
+    ],
+    [
+        'iso_code' => 44,
+        'name' => 'Bahamian Dollar',
+        'currency_code' => 'BSD',
+    ],
+    [
+        'iso_code' => 50,
+        'name' => 'Bangladeshi Taka',
+        'currency_code' => 'BDT',
+    ],
+    [
+        'iso_code' => 52,
+        'name' => 'Barbados Dollar',
+        'currency_code' => 'BBD',
+    ],
+    [
+        'iso_code' => 974,
+        'name' => 'Belarussian Rouble',
+        'currency_code' => 'BYR',
+    ],
+    [
+        'iso_code' => 68,
+        'name' => 'Bolivian Boliviano',
+        'currency_code' => 'BOB',
+    ],
+    [
+        'iso_code' => 986,
+        'name' => 'Brazilian Real',
+        'currency_code' => 'BRL',
+    ],
+    [
+        'iso_code' => 826,
+        'name' => 'British Pounds Sterling',
+        'currency_code' => 'GBP',
+    ],
+    [
+        'iso_code' => 975,
+        'name' => 'Bulgarian Lev',
+        'currency_code' => 'BGN',
+    ],
+    [
+        'iso_code' => 116,
+        'name' => 'Cambodia Riel',
+        'currency_code' => 'KHR',
+    ],
+    [
+        'iso_code' => 124,
+        'name' => 'Canadian Dollars',
+        'currency_code' => 'CAD',
+    ],
+    [
+        'iso_code' => 136,
+        'name' => 'Cayman Islands Dollar',
+        'currency_code' => 'KYD',
+    ],
+    [
+        'iso_code' => 152,
+        'name' => 'Chilean Peso',
+        'currency_code' => 'CLP',
+    ],
+    [
+        'iso_code' => 156,
+        'name' => 'Chinese Renminbi Yuan',
+        'currency_code' => 'CNY',
+    ],
+    [
+        'iso_code' => 170,
+        'name' => 'Colombian Peso',
+        'currency_code' => 'COP',
+    ],
+    [
+        'iso_code' => 188,
+        'name' => 'Costa Rican Colon',
+        'currency_code' => 'CRC',
+    ],
+    [
+        'iso_code' => 191,
+        'name' => 'Croatia Kuna',
+        'currency_code' => 'HRK',
+    ],
+    [
+        'iso_code' => 196,
+        'name' => 'Cypriot Pounds',
+        'currency_code' => 'CPY',
+    ],
+    [
+        'iso_code' => 203,
+        'name' => 'Czech Koruna',
+        'currency_code' => 'CZK',
+    ],
+    [
+        'iso_code' => 208,
+        'name' => 'Danish Krone',
+        'currency_code' => 'DKK',
+    ],
+    [
+        'iso_code' => 214,
+        'name' => 'Dominican Republic Peso',
+        'currency_code' => 'DOP',
+    ],
+    [
+        'iso_code' => 951,
+        'name' => 'East Caribbean Dollar',
+        'currency_code' => 'XCD',
+    ],
+    [
+        'iso_code' => 818,
+        'name' => 'Egyptian Pound',
+        'currency_code' => 'EGP',
+    ],
+    [
+        'iso_code' => 232,
+        'name' => 'Eritrean Nakfa',
+        'currency_code' => 'ERN',
+    ],
+    [
+        'iso_code' => 233,
+        'name' => 'Estonia Kroon',
+        'currency_code' => 'EEK',
+    ],
+    [
+        'iso_code' => 978,
+        'name' => 'Euro',
+        'currency_code' => 'EUR',
+    ],
+    [
+        'iso_code' => 981,
+        'name' => 'Georgian Lari',
+        'currency_code' => 'GEL',
+    ],
+    [
+        'iso_code' => 288,
+        'name' => 'Ghana Cedi',
+        'currency_code' => 'GHC',
+    ],
+    [
+        'iso_code' => 292,
+        'name' => 'Gibraltar Pound',
+        'currency_code' => 'GIP',
+    ],
+    [
+        'iso_code' => 320,
+        'name' => 'Guatemala Quetzal',
+        'currency_code' => 'GTQ',
+    ],
+    [
+        'iso_code' => 340,
+        'name' => 'Honduras Lempira',
+        'currency_code' => 'HNL',
+    ],
+    [
+        'iso_code' => 344,
+        'name' => 'Hong Kong Dollars',
+        'currency_code' => 'HKD',
+    ],
+    [
+        'iso_code' => 348,
+        'name' => 'Hungary Forint',
+        'currency_code' => 'HUF',
+    ],
+    [
+        'iso_code' => 352,
+        'name' => 'Icelandic Krona',
+        'currency_code' => 'ISK',
+    ],
+    [
+        'iso_code' => 356,
+        'name' => 'Indian Rupee',
+        'currency_code' => 'INR',
+    ],
+    [
+        'iso_code' => 360,
+        'name' => 'Indonesia Rupiah',
+        'currency_code' => 'IDR',
+    ],
+    [
+        'iso_code' => 376,
+        'name' => 'Israel Shekel',
+        'currency_code' => 'ILS',
+    ],
+    [
+        'iso_code' => 388,
+        'name' => 'Jamaican Dollar',
+        'currency_code' => 'JMD',
+    ],
+    [
+        'iso_code' => 392,
+        'name' => 'Japanese yen',
+        'currency_code' => 'JPY',
+    ],
+    [
+        'iso_code' => 368,
+        'name' => 'Iraqi Dinar',
+        'currency_code' => 'IQD',
+    ],
+    [
+        'iso_code' => 404,
+        'name' => 'Kenyan Shilling',
+        'currency_code' => 'KES',
+    ],
+    [
+        'iso_code' => 414,
+        'name' => 'Kuwaiti Dinar',
+        'currency_code' => 'KWD',
+    ],
+    [
+        'iso_code' => 428,
+        'name' => 'Latvia Lat',
+        'currency_code' => 'LVL',
+    ],
+    [
+        'iso_code' => 422,
+        'name' => 'Lebanese Pound',
+        'currency_code' => 'LBP',
+    ],
+    [
+        'iso_code' => 440,
+        'name' => 'Lithuania Litas',
+        'currency_code' => 'LTL',
+    ],
+    [
+        'iso_code' => 446,
+        'name' => 'Macau Pataca',
+        'currency_code' => 'MOP',
+    ],
+    [
+        'iso_code' => 807,
+        'name' => 'Macedonian Denar',
+        'currency_code' => 'MKD',
+    ],
+    [
+        'iso_code' => 969,
+        'name' => 'Malagascy Ariary',
+        'currency_code' => 'MGA',
+    ],
+    [
+        'iso_code' => 458,
+        'name' => 'Malaysian Ringgit',
+        'currency_code' => 'MYR',
+    ],
+    [
+        'iso_code' => 470,
+        'name' => 'Maltese Lira',
+        'currency_code' => 'MTL',
+    ],
+    [
+        'iso_code' => 977,
+        'name' => 'Marka',
+        'currency_code' => 'BAM',
+    ],
+    [
+        'iso_code' => 480,
+        'name' => 'Mauritius Rupee',
+        'currency_code' => 'MUR',
+    ],
+    [
+        'iso_code' => 484,
+        'name' => 'Mexican Pesos',
+        'currency_code' => 'MXN',
+    ],
+    [
+        'iso_code' => 508,
+        'name' => 'Mozambique Metical',
+        'currency_code' => 'MZM',
+    ],
+    [
+        'iso_code' => 524,
+        'name' => 'Nepalese Rupee',
+        'currency_code' => 'NPR',
+    ],
+    [
+        'iso_code' => 532,
+        'name' => 'Netherlands Antilles Guilder',
+        'currency_code' => 'ANG',
+    ],
+    [
+        'iso_code' => 901,
+        'name' => 'New Taiwanese Dollars',
+        'currency_code' => 'TWD',
+    ],
+    [
+        'iso_code' => 554,
+        'name' => 'New Zealand Dollars',
+        'currency_code' => 'NZD',
+    ],
+    [
+        'iso_code' => 558,
+        'name' => 'Nicaragua Cordoba',
+        'currency_code' => 'NIO',
+    ],
+    [
+        'iso_code' => 566,
+        'name' => 'Nigeria Naira',
+        'currency_code' => 'NGN',
+    ],
+    [
+        'iso_code' => 408,
+        'name' => 'North Korean Won',
+        'currency_code' => 'KPW',
+    ],
+    [
+        'iso_code' => 578,
+        'name' => 'Norwegian Krone',
+        'currency_code' => 'NOK',
+    ],
+    [
+        'iso_code' => 512,
+        'name' => 'Omani Riyal',
+        'currency_code' => 'OMR',
+    ],
+    [
+        'iso_code' => 586,
+        'name' => 'Pakistani Rupee',
+        'currency_code' => 'PKR',
+    ],
+    [
+        'iso_code' => 600,
+        'name' => 'Paraguay Guarani',
+        'currency_code' => 'PYG',
+    ],
+    [
+        'iso_code' => 604,
+        'name' => 'Peru New Sol',
+        'currency_code' => 'PEN',
+    ],
+    [
+        'iso_code' => 608,
+        'name' => 'Philippine Pesos',
+        'currency_code' => 'PHP',
+    ],
+    [
+        'iso_code' => 634,
+        'name' => 'Qatari Riyal',
+        'currency_code' => 'QAR',
+    ],
+    [
+        'iso_code' => 946,
+        'name' => 'Romanian New Leu',
+        'currency_code' => 'RON',
+    ],
+    [
+        'iso_code' => 643,
+        'name' => 'Russian Federation Ruble',
+        'currency_code' => 'RUB',
+    ],
+    [
+        'iso_code' => 682,
+        'name' => 'Saudi Riyal',
+        'currency_code' => 'SAR',
+    ],
+    [
+        'iso_code' => 891,
+        'name' => 'Serbian Dinar',
+        'currency_code' => 'CSD',
+    ],
+    [
+        'iso_code' => 690,
+        'name' => 'Seychelles Rupee',
+        'currency_code' => 'SCR',
+    ],
+    [
+        'iso_code' => 702,
+        'name' => 'Singapore Dollars',
+        'currency_code' => 'SGD',
+    ],
+    [
+        'iso_code' => 703,
+        'name' => 'Slovak Koruna',
+        'currency_code' => 'SKK',
+    ],
+    [
+        'iso_code' => 705,
+        'name' => 'Slovenia Tolar',
+        'currency_code' => 'SIT',
+    ],
+    [
+        'iso_code' => 710,
+        'name' => 'South African Rand',
+        'currency_code' => 'ZAR',
+    ],
+    [
+        'iso_code' => 410,
+        'name' => 'South Korean Won',
+        'currency_code' => 'KRW',
+    ],
+    [
+        'iso_code' => 144,
+        'name' => 'Sri Lankan Rupee',
+        'currency_code' => 'LKR',
+    ],
+    [
+        'iso_code' => 968,
+        'name' => 'Surinam Dollar',
+        'currency_code' => 'SRD',
+    ],
+    [
+        'iso_code' => 752,
+        'name' => 'Swedish Krona',
+        'currency_code' => 'SEK',
+    ],
+    [
+        'iso_code' => 756,
+        'name' => 'Swiss Francs',
+        'currency_code' => 'CHF',
+    ],
+    [
+        'iso_code' => 834,
+        'name' => 'Tanzanian Shilling',
+        'currency_code' => 'TZS',
+    ],
+    [
+        'iso_code' => 764,
+        'name' => 'Thai Baht',
+        'currency_code' => 'THB',
+    ],
+    [
+        'iso_code' => 780,
+        'name' => 'Trinidad and Tobago Dollar',
+        'currency_code' => 'TTD',
+    ],
+    [
+        'iso_code' => 949,
+        'name' => 'Turkish New Lira',
+        'currency_code' => 'TRY',
+    ],
+    [
+        'iso_code' => 784,
+        'name' => 'UAE Dirham',
+        'currency_code' => 'AED',
+    ],
+    [
+        'iso_code' => 840,
+        'name' => 'US Dollars',
+        'currency_code' => 'USD',
+    ],
+    [
+        'iso_code' => 800,
+        'name' => 'Ugandian Shilling',
+        'currency_code' => 'UGX',
+    ],
+//    [
+//        'iso_code' => 980,
+//        'name' => 'Ukraine Hryvna',
+//        'currency_code' => 'UAH',
+//    ],
+    [
+        'iso_code' => 858,
+        'name' => 'Uruguayan Peso',
+        'currency_code' => 'UYU',
+    ],
+    [
+        'iso_code' => 860,
+        'name' => 'Uzbekistani Som',
+        'currency_code' => 'UZS',
+    ],
+    [
+        'iso_code' => 862,
+        'name' => 'Venezuela Bolivar',
+        'currency_code' => 'VEB',
+    ],
+    [
+        'iso_code' => 704,
+        'name' => 'Vietnam Dong',
+        'currency_code' => 'VND',
+    ],
+    [
+        'iso_code' => 894,
+        'name' => 'Zambian Kwacha',
+        'currency_code' => 'AMK',
+    ],
+    [
+        'iso_code' => 716,
+        'name' => 'Zimbabwe Dollar',
+        'currency_code' => 'ZWD',
+    ],
+    [
+        'iso_code' => 8,
+        'name' => 'Albanian Lek',
+        'currency_code' => 'ALL',
+    ],
+    [
+        'iso_code' => 51,
+        'name' => 'Armenian Dram',
+        'currency_code' => 'AMD',
+    ],
+    [
+        'iso_code' => 973,
+        'name' => 'Angolas Kvanza',
+        'currency_code' => 'AOA',
+    ],
+    [
+        'iso_code' => 48,
+        'name' => 'Bahraini Dinar',
+        'currency_code' => 'BHD',
+    ],
+    [
+        'iso_code' => 108,
+        'name' => 'Burundian Franc',
+        'currency_code' => 'BIF',
+    ],
+    [
+        'iso_code' => 96,
+        'name' => 'Brunei Dollar',
+        'currency_code' => 'BND',
+    ],
+    [
+        'iso_code' => 398,
+        'name' => 'Tenge',
+        'currency_code' => 'KZT',
+    ],
+    [
+        'iso_code' => 498,
+        'name' => 'Moldovan Leu',
+        'currency_code' => 'MDL',
+    ],
+    [
+        'iso_code' => 933,
+        'name' => 'Belarusian Ruble',
+        'currency_code' => 'BYN',
+    ],
+    [
+        'iso_code' => 960,
+        'name' => 'Special Drawing Rights',
+        'currency_code' => 'XDR',
+    ],
+    [
+        'iso_code' => 985,
+        'name' => 'Zloty',
+        'currency_code' => 'PLN',
+    ],
+    [
+        'iso_code' => 12,
+        'name' => 'Algerian Dinar',
+        'currency_code' => 'DZD',
+    ],
+    [
+        'iso_code' => 364,
+        'name' => 'Iranian Rial',
+        'currency_code' => 'IRR',
+    ],
+    [
+        'iso_code' => 417,
+        'name' => 'Kyrgyzstan Som',
+        'currency_code' => 'KGS',
+    ],
+    [
+        'iso_code' => 434,
+        'name' => 'Libyan Dinar',
+        'currency_code' => 'LYD',
+    ],
+    [
+        'iso_code' => 504,
+        'name' => 'Moroccan Dirham',
+        'currency_code' => 'MAD',
+    ],
+    [
+        'iso_code' => 788,
+        'name' => 'Tunisian Dinar',
+        'currency_code' => 'TND',
+    ],
+    [
+        'iso_code' => 934,
+        'name' => 'Turkmenistan Manat',
+        'currency_code' => 'TMT',
+    ],
+    [
+        'iso_code' => 941,
+        'name' => 'Serbian Dinar',
+        'currency_code' => 'RSD',
+    ],
+    [
+        'iso_code' => 972,
+        'name' => 'Somoni',
+        'currency_code' => 'TJS',
+    ],
+    [
+        'iso_code' => 959,
+        'name' => 'Gold',
+        'currency_code' => 'XAU',
+    ],
+    [
+        'iso_code' => 961,
+        'name' => 'Silver',
+        'currency_code' => 'XAG',
+    ],
+    [
+        'iso_code' => 962,
+        'name' => 'Platinum',
+        'currency_code' => 'XPT',
+    ],
+    [
+        'iso_code' => 964,
+        'name' => 'Palladium',
+        'currency_code' => 'XPD',
     ]
 ];
+

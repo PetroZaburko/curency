@@ -21,23 +21,21 @@ class PrivatBank extends CurrencyService
         $this->uri .= Carbon::today()->format('d.m.Y');
     }
 
+    /**
+     * @param array $data
+     * @return CurrencyCollection
+     */
     protected function normalizeData($data)
     {
-        foreach ($data['exchangeRate'] as $element) {
-            if (!isset($element['currency'])) {
-                continue;
-            }
-            if ($element['currency'] == 'UAH') {
-                continue;
-            }
-            foreach ($this->currency_codes as $iso_code => $value) {
-                if ($element['currency'] == $value['Code']) {
-                    $name = $value['Name'];
-                    $currency_code = $element['currency'];
-                    $rate = isset($element['saleRate']) ? $element['saleRate'] : $element['saleRateNB'];
-                    $date = $data['date'];
-                    $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
-                }
+        $collection = collect($data['exchangeRate']);
+        foreach ($this->currency_codes as $element) {
+            if($currency = $collection->where('currency', $element['currency_code'])->first()) {
+                $iso_code = $element['iso_code'];
+                $name = $element['name'];
+                $currency_code = $element['currency_code'];
+                $rate = isset($currency['saleRate']) ? $currency['saleRate'] : $currency['saleRateNB'];;
+                $date = $data['date'];;
+                $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
             }
         }
         $this->collection->addUahElement();

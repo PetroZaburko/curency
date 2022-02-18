@@ -22,16 +22,16 @@ class GovBank extends CurrencyService
      */
     protected function normalizeData($data)
     {
-        foreach ($data as $element) {
-            if (!isset($this->currency_codes[$element['r030']])) {
-                continue;
+        $collection = collect($data);
+        foreach ($this->currency_codes as $element) {
+            if ($currency = $collection->where('r030', $element['iso_code'])->first()) {
+                $iso_code = $element['iso_code'];
+                $name = $element['name'];
+                $currency_code = $element['currency_code'];;
+                $rate = $currency['rate'];
+                $date = $currency['exchangedate'];
+                $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
             }
-            $iso_code = $element['r030'];
-            $name = $this->currency_codes[$element['r030']]['Name'];
-            $currency_code= $element['cc'];
-            $rate = $element['rate'];
-            $date = $element['exchangedate'];
-            $this->collection->addElement($iso_code, $name, $currency_code, $rate, $date);
         }
         $this->collection->addUahElement();
         return $this->collection;
