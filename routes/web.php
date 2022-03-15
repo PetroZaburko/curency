@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'RateController@index');
 
 Route::group(['middleware' => 'guest'], function (){
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -23,6 +24,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('profile', 'profile')->name('profile');
     Route::get('tokens', 'UserController@tokens')->name('tokens');
     Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');
+
+    Route::get('test', 'UserController@test');
 });
 
 
@@ -43,9 +46,9 @@ Route::group(['middleware' => 'auth'], function() {
 //});
 
 
+//
 
-Route::get('/', 'RateController@index');
-Route::get('/test', 'TestController@index');
-Route::get('/one', 'TestController@one');
+//Route::get('/test', 'TestController@index');
+//Route::get('/one', 'TestController@one');
 //Route::get('/date', 'RateController@date');
 //Route::get('/json', 'RateController@json');

@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\UserRegistrationMail;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -73,8 +76,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        $token = $user->createToken('ApiKey')->plainTextToken;
-        Session::put('error', 'Please keep the token key in a safe place as it will not be shown again : ' . $token);
         return $user;
     }
+
+    protected function registered(Request $request, $user)
+    {
+        $token = $user->createToken('ApiKey')->plainTextToken;
+        Session::put('error', 'Please keep the token key in a safe place as it will not be shown again : ' . $token);
+        Mail::to($user)->send(new UserRegistrationMail($user, $request->get('password')));
+    }
+
+
 }
