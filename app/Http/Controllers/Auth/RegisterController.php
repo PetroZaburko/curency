@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Mail\UserRegistrationMail;
+use App\Jobs\SendRegistrationUserEmailJob;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -55,7 +54,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:mysql.users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -82,9 +81,8 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         $token = $user->createToken('ApiKey')->plainTextToken;
+        SendRegistrationUserEmailJob::dispatch($user, $request->get('password'));
         Session::put('error', 'Please keep the token key in a safe place as it will not be shown again : ' . $token);
-        Mail::to($user)->send(new UserRegistrationMail($user, $request->get('password')));
     }
-
 
 }

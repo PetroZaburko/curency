@@ -27,28 +27,3 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::get('test', 'UserController@test');
 });
-
-
-
-
-
-//Route::get('/welcome', function () {
-//    return view('auth.register');
-//})->name('register');
-//
-//
-//Route::get('login', function () {
-//    return view('auth.login');
-//})->name('login');
-//
-//Route::post('registe', function () {
-//    echo 'register';
-//});
-
-
-//
-
-//Route::get('/test', 'TestController@index');
-//Route::get('/one', 'TestController@one');
-//Route::get('/date', 'RateController@date');
-//Route::get('/json', 'RateController@json');
