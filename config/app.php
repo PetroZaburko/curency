@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Kiev',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,7 +177,6 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\CurrencyServiceProvider::class,
-//        App\Providers\TestServiceProvider::class,
 
     ],
 
@@ -229,9 +228,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-//        'Parser' => \App\Facades\Parser::class,
-
     ],
 
 ];

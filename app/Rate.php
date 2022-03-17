@@ -5,11 +5,11 @@ namespace App;
 use App\Collections\CustomRateCollection;
 use App\Exceptions\CurrencyException;
 use App\Services\Currency;
+use App\Services\CurrencyCollection;
 use App\Services\CurrencyIterator;
 use Carbon\Carbon;
-use App\Services\CurrencyCollection;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Log;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 class Rate extends Model
@@ -72,24 +72,15 @@ class Rate extends Model
 
     public static function updateDB(CurrencyIterator $iterator)
     {
-        if(self::isTimeToUpdateDB()) {
-            try {
-                $allCurrency = $iterator->exchange()->getCurrency();
-                self::saveAll($allCurrency);
-            } catch (CurrencyException $e) {
-                Session::put('error', $e->getMessage());
-            }
+        try {
+            $allCurrency = $iterator->exchange()->getCurrency();
+            self::saveAll($allCurrency);
+            Log::info("DB was successful updated from source {$iterator->exchange()->getResourceName()} !");
+            return true;
+        } catch (CurrencyException $e) {
+            Log::error($e->getMessage());
+            return false;
         }
     }
-
-    protected static function isTimeToUpdateDB()
-    {
-//        return true;
-        if ($maxDate = self::max('created_at')) {
-            return $maxDate->toDateTime() < Carbon::today()->toDateTime();
-        }
-        return true;
-    }
-
 
 }

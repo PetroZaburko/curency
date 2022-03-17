@@ -78,7 +78,7 @@ class RegisterController extends Controller
         return $user;
     }
 
-    protected function registered(Request $request, $user)
+    protected function registered(Request $request, User $user)
     {
         $token = $user->createToken('ApiKey')->plainTextToken;
         SendRegistrationUserEmailJob::dispatch($user, $request->get('password'));
