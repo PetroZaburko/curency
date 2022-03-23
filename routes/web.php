@@ -25,5 +25,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('tokens', 'UserController@tokens')->name('tokens');
     Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');
 
-    Route::get('test', 'UserController@test');
+
 });
+
+Route::get('test', 'RateController@test');

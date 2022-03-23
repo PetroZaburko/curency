@@ -3,30 +3,17 @@
 namespace App;
 
 use App\Collections\CustomRateCollection;
-use App\Exceptions\CurrencyException;
-use App\Services\Currency;
-use App\Services\CurrencyCollection;
-use App\Services\CurrencyIterator;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Log;
 use Jenssegers\Mongodb\Eloquent\Model;
 
-class Rate extends Model
+abstract class Rate extends Model
 {
     const UPDATED_AT = null;
 
     protected $fillable = ['iso_code', 'name', 'currency_code', 'rate', 'date'];
-    protected $connection = 'mongodb';
 
-//    protected $casts = [
-//        'iso_code' => 'integer',
-//        'name' => 'string',
-//        'currency_code' => 'string',
-//        'rate' => 'float',
-//        'date' => 'string',
-//        'created_at' => 'datetime:Y-m-d H:i'
-//    ];
+    protected $connection = 'mongodb';
 
 
     public function setCreatedAt($value)
@@ -45,42 +32,35 @@ class Rate extends Model
         $this->attributes['currency_code'] = strtoupper($value);
     }
 
-    public static function allLastUpdated()
+    public function allLastUpdated()
     {
         return Cache::remember('currency', 60*60*24, function () {
-            return self::where('created_at', self::max('created_at')->toDateTime())->get();
+            return $this->where('created_at', $this->max('created_at')->toDateTime())->get();
         });
     }
 
-    protected static function saveAll(CurrencyCollection $collection)
+    protected function saveAll($collection)
     {
         foreach ($collection as $element) {
-            self::saveOne($element);
+            $this->saveOne($element);
         }
     }
 
-    protected static function saveOne(Currency $element)
+    protected function saveOne($element)
     {
         $rate = new static();
-        $rate->iso_code = $element->getIsoCode();
-        $rate->name = $element->getName();
-        $rate->currency_code = $element->getCurrencyCode();
-        $rate->rate = $element->getRate();
-        $rate->date = $element->getDate();
+        $rate->iso_code = $element->iso_code;
+        $rate->name = $element->name;
+        $rate->currency_code = $element->currency_code;
+        $rate->rate = $element->rate;
+        $rate->date = $element->date;
         $rate->save();
     }
 
-    public static function updateDB(CurrencyIterator $iterator)
-    {
-        try {
-            $allCurrency = $iterator->exchange()->getCurrency();
-            self::saveAll($allCurrency);
-            Log::info("DB was successful updated from source {$iterator->exchange()->getResourceName()} !");
-            return true;
-        } catch (CurrencyException $e) {
-            Log::error($e->getMessage());
-            return false;
-        }
-    }
+    /**
+     * @param $object
+     * @return boolean
+     */
+    public abstract function updateDB($object);
 
 }

@@ -3,11 +3,10 @@
 namespace App\Providers;
 
 use App\Observers\CurrencyObserver;
-use App\Rate;
+use App\RateFree;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -31,6 +30,6 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        Rate::observe(CurrencyObserver::class);
+        RateFree::observe(CurrencyObserver::class);
     }
 }

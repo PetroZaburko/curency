@@ -2,7 +2,8 @@
 
 namespace App\Console;
 
-use App\Console\Commands\RateUpdateCommand;
+use App\Console\Commands\RateUpdateFromAPICommand;
+use App\Console\Commands\RateUpdateFromTableCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -14,7 +15,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        RateUpdateCommand:: class
+        RateUpdateFromAPICommand:: class,
+        RateUpdateFromTableCommand::class
     ];
 
     /**
@@ -25,7 +27,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('rate:update')->dailyAt('7:00');
+        $schedule->command('rate:update-from-table free')->dailyAt('7:00');
+        $schedule->command('rate:update-from-table starter')->everyThreeHours();
+        $schedule->command('rate:update-from-API enterprise')->hourly();
+
 //        $schedule->command('rate:update')->everyMinute();
     }
 
