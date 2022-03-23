@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\CurrencyServiceProvider::class,
+        App\Providers\RateModelDependOnToken::class
 
     ],
 

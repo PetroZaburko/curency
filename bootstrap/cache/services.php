@@ -37,6 +37,7 @@
     33 => 'App\\Providers\\EventServiceProvider',
     34 => 'App\\Providers\\RouteServiceProvider',
     35 => 'App\\Providers\\CurrencyServiceProvider',
+    36 => 'App\\Providers\\RateModelDependOnToken',
   ),
   'eager' => 
   array (
@@ -62,6 +63,7 @@
     19 => 'App\\Providers\\EventServiceProvider',
     20 => 'App\\Providers\\RouteServiceProvider',
     21 => 'App\\Providers\\CurrencyServiceProvider',
+    22 => 'App\\Providers\\RateModelDependOnToken',
   ),
   'deferred' => 
   array (

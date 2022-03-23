@@ -5,21 +5,13 @@ namespace App\Http\Controllers\Api\v1;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\RateCollection;
 use App\Rate;
-use Illuminate\Support\Facades\Auth;
 
 class ApiRateController extends Controller
 {
 
-    public function index($base = null)
+    public function index(Rate $rate, $base = null)
     {
-        $class = '\App\Rate' . Auth::user()->currentAccessToken()->tariff->name;
-        $model = new $class;
-
-        /**
-         * @var $model Rate
-         */
-        $all = $model->allLastUpdated();
-
+        $all = $rate->allLastUpdated();
         if (!$base) {
             return new RateCollection($all);
         }
