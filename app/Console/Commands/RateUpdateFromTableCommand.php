@@ -2,14 +2,12 @@
 
 namespace App\Console\Commands;
 
+use App\Rate;
 use App\RateEnterprise;
-use App\Traits\RateUpdateCommandTrait;
 use Illuminate\Console\Command;
 
 class RateUpdateFromTableCommand extends Command
 {
-    use RateUpdateCommandTrait;
-
     /**
      * The name and signature of the console command.
      *
@@ -25,25 +23,15 @@ class RateUpdateFromTableCommand extends Command
     protected $description = 'Update table rates from other table source';
 
     /**
-     * List of available models to update on this command
-     *
-     * @var array
-     */
-    protected $availableClasses = [
-        \App\RateFree::class,
-        \App\RateStarter::class
-    ];
-
-    /**
      * Execute the console command.
      *
-     * @param RateEnterprise $rate
+     * @param Rate $rate
+     * @param RateEnterprise $source
      * @return mixed
      */
-    public function handle(RateEnterprise $rate)
+    public function handle(Rate $rate, RateEnterprise $source)
     {
-        $this->makeInstance();
-        $this->instance->updateDB($rate) ?
+        $rate->updateDB($source) ?
             $this->info('DB was successful updated!') :
             $this->error('DB not updated!');
     }

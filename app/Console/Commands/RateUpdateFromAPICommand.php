@@ -2,14 +2,12 @@
 
 namespace App\Console\Commands;
 
+use App\Rate;
 use App\Services\CurrencyIterator;
-use App\Traits\RateUpdateCommandTrait;
 use Illuminate\Console\Command;
 
 class RateUpdateFromAPICommand extends Command
 {
-    use RateUpdateCommandTrait;
-
     /**
      * The name and signature of the console command.
      *
@@ -25,24 +23,15 @@ class RateUpdateFromAPICommand extends Command
     protected $description = 'Update table rates from api sources';
 
     /**
-     * List of available models to update on this command
-     *
-     * @var array
-     */
-    protected $availableClasses = [
-        \App\RateEnterprise::class
-    ];
-
-    /**
      * Execute the console command.
      *
+     * @param Rate $rate
      * @param CurrencyIterator $iterator
      * @return mixed
      */
-    public function handle(CurrencyIterator $iterator)
+    public function handle(Rate $rate, CurrencyIterator $iterator)
     {
-        $this->makeInstance();
-        $this->instance->updateDB($iterator) ?
+        $rate->updateDB($iterator) ?
             $this->info('DB was successful updated!') :
             $this->error('DB not updated!');
     }
