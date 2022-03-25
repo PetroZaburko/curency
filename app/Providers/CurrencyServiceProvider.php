@@ -5,9 +5,10 @@ namespace App\Providers;
 
 use App\Services\CurrencyIterator;
 use App\Services\CurrencyService;
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class CurrencyServiceProvider extends ServiceProvider
+class CurrencyServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     public function register()
     {
@@ -17,4 +18,11 @@ class CurrencyServiceProvider extends ServiceProvider
             return new CurrencyIterator($this->app->tagged(CurrencyService::class));
         });
     }
+
+    public function provides()
+    {
+        return [CurrencyIterator::class];
+    }
+
+
 }
