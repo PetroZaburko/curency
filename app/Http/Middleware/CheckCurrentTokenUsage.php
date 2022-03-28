@@ -21,7 +21,7 @@ class CheckCurrentTokenUsage
         /** @var $currentToken Token
          */
         $currentToken = Auth::user()->currentAccessToken();
-        if ($this->isNewMonthBecome()) {
+        if ($this->isNewMonth()) {
             $currentToken->resetTokenUsage();
         }
         if ($currentToken->isTokenAllowed()) {
@@ -33,9 +33,9 @@ class CheckCurrentTokenUsage
         ], 200);
     }
 
-    protected function isNewMonthBecome()
+    protected function isNewMonth()
     {
-        return Carbon::today()->format('d') == 1;
+        return Carbon::today()->day == 1;
     }
 
 }
