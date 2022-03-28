@@ -15,6 +15,10 @@
                 <i class="fas fa-lock"></i>
                 Change password
             </button>
+            <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('pdf')}}';">
+                <i class="fas fa-file-pdf"></i>
+                Convert to PDF
+            </button>
             <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('tokens')}}';">
                 <i class="fas fa-key"></i>
                 Api key
