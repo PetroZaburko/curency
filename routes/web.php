@@ -23,6 +23,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
     Route::view('profile', 'profile')->name('profile');
     Route::get('tokens', 'UserController@tokens')->name('tokens');
+    Route::get('pdf', 'UserController@pdf')->name('pdf');
     Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');
 
 
