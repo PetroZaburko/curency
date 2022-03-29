@@ -49,9 +49,6 @@ class RateModelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
-
-
         $this->app->singleton(Rate::class, function() {
             if($this->app->runningInConsole()) {
                 if ($this->isClassAvailableInCommand($class = $this->getClassName(), $this->getCommandName())) {
