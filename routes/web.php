@@ -11,6 +11,7 @@
 |
 */
 Route::get('/', 'RateController@index');
+Route::get('language/{locale}', 'LocaleController@guestSave')->name('locale.guest.save');
 
 Route::group(['middleware' => 'guest'], function (){
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -24,6 +25,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('profile', 'profile')->name('profile');
     Route::get('tokens', 'UserController@tokens')->name('tokens');
     Route::get('pdf', 'UserController@pdf')->name('pdf');
+    Route::get('language', 'LocaleController@show')->name('locale.show');
+    Route::post('language', 'LocaleController@authSave')->name('locale.auth.save');
     Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');
 
 

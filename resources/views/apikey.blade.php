@@ -2,19 +2,19 @@
 @section('content')
     <div class="text-center">
         <h4>
-            Your api keys
+            @lang('main.your_keys')
         </h4>
     </div>
     <div>
         <table class="table table-hover">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Progress</th>
-                    <th scope="col">Usage</th>
-                    <th scope="col">Created</th>
-                    <th scope="col">Last used</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">@lang('main.name')</th>
+                    <th scope="col">@lang('main.progress')</th>
+                    <th scope="col">@lang('main.usage')</th>
+                    <th scope="col">@lang('main.created')</th>
+                    <th scope="col">@lang('main.last_used')</th>
+                    <th scope="col">@lang('main.actions')</th>
                 </tr>
             </thead>
             <tbody>

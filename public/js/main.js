@@ -8,8 +8,8 @@ $ (function() {
     });
 
     $('#logout').click(function () {
-        $('#modalLongTitle').html('Exit system !!!');
-        $('#modalBodyHeader').html('Do you really want to Logout? Are you sure?');
+        $('#modalLongTitle').html(modalTitle);
+        $('#modalBodyHeader').html(modalBody);
         // $('#deleteConfirmButton').unbind("click");
         $('#deleteConfirmButton').click( function () {
             logOutSystem();

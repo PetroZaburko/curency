@@ -82,7 +82,7 @@ class RegisterController extends Controller
     {
         $token = $user->createToken('ApiKey')->plainTextToken;
         SendRegistrationUserEmailJob::dispatch($user, $request->get('password'));
-        Session::put('error', 'Please keep the token key in a safe place as it will not be shown again : ' . $token);
+        Session::put('error', _('main.api_create') . $token);
     }
 
 }

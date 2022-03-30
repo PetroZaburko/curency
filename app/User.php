@@ -45,5 +45,10 @@ class User extends Authenticatable
         return $this->accessToken ?: $this->tokens->first();
     }
 
+    public function saveLocale($locale)
+    {
+        $this->locale = $locale;
+        $this->save();
+    }
 
 }

@@ -4,7 +4,7 @@
 <div class="log-form">
     <form action="{{ route('login') }}" method="POST">
         @csrf
-        <h2 class="text-center">{{ __('Login') }}</h2>
+        <h2 class="text-center">@lang('auth.login')</h2>
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -12,7 +12,7 @@
                         <i class="fas fa-at"></i>
                     </span>
                 </div>
-                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Email') }}" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="@lang('auth.email')" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -28,7 +28,7 @@
                         <i class="fas fa-lock"></i>
                     </span>
                 </div>
-                <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" required autocomplete="current-password">
+                <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="@lang('auth.password')" required autocomplete="current-password">
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -42,14 +42,14 @@
             </div>
         @endif
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }}</button>
+            <button type="submit" class="btn btn-primary btn-block">@lang('auth.login')</button>
         </div>
 
         <div class="clearfix">
             <span class="pull-left checkbox-inline">
                 <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 <label class="form-check-label" for="remember">
-                    {{ __('Remember me') }}
+                    @lang('auth.remember_me')
                 </label>
             </span>
 
@@ -60,6 +60,6 @@
             @endif
         </div>
     </form>
-    <div class="text-center small">Don't have an account! <a href="{{ route('register') }}">Register here</a>.</div>
+    <div class="text-center small">@lang('auth.!has_account') <a href="{{ route('register') }}">@lang('auth.reg_here')</a></div>
 </div>
 @endsection

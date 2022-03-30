@@ -11,7 +11,8 @@ $(function () {
         sortable: true,
         sortClass: 'table-active',
         paginationHAlign: 'left',
-        paginationDetailHAlign: 'right'
+        paginationDetailHAlign: 'right',
+        locale: locale
     });
 });
 

@@ -4,26 +4,20 @@
 
     <script>
         let rates = '{!! $rates !!}';
+        let locale = '@lang('main.locale')';
     </script>
     <script src="{{ asset('js/currency.js') }}"></script>
 
-{{--    <div class="message-info">--}}
-{{--        @if (Session::has('error'))--}}
-{{--            <div class="alert alert-danger">{{ Session::pull('error') }}</div>--}}
-{{--        @endif--}}
-{{--    </div>--}}
-
-{{--    @include('header')--}}
     <div>
-        {{' Last updated at:  ' . $date }}
+        @lang('main.last_updated') {{': ' . $date }}
     </div>
     <table id="currency_table">
         <thead>
             <tr>
-                <th data-sortable="true" data-field="iso_code">ISO code</th>
-                <th data-sortable="true" data-field="name">Name</th>
-                <th data-sortable="true" data-field="currency_code">Currency Code</th>
-                <th data-sortable="true" data-field="rate">Rate</th>
+                <th data-sortable="true" data-field="iso_code">@lang('main.iso_code')</th>
+                <th data-sortable="true" data-field="name">@lang('main.name')</th>
+                <th data-sortable="true" data-field="currency_code">@lang('main.cur_code')</th>
+                <th data-sortable="true" data-field="rate">@lang('main.rate')</th>
 {{--                <th data-field="date">Date</th>--}}
             </tr>
         </thead>
