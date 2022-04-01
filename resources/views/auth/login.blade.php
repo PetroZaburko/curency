@@ -44,6 +44,30 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">@lang('auth.login')</button>
         </div>
+        <h5 class="text-center">
+            @lang('auth.login_with')
+        </h5>
+
+        <div class="row">
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-danger btn-block" onclick="location.href = '{{route('external.auth', ['provider' => 'google'])}}';">
+                    <i class="fab fa-google-plus-g"></i>
+                    Google
+                </button>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-primary btn-block" onclick="location.href = '{{route('external.auth', ['provider' => 'facebook'])}}';">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </button>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn btn-outline-secondary btn-block" onclick="location.href = '{{route('external.auth', ['provider' => 'github'])}}';">
+                    <i class="fab fa-github"></i>
+                    Github
+                </button>
+            </div>
+        </div>
 
         <div class="clearfix">
             <span class="pull-left checkbox-inline">

@@ -18,6 +18,7 @@ return [
 
 
     'login' => 'Login',
+    'login_with' => 'Login with :',
     'logout' => 'Logout',
     'username' => 'User name',
     'email' => 'Email',

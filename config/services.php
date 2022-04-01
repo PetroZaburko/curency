@@ -30,4 +30,22 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FB_APP_ID'),
+        'client_secret' => env('FB_APP_SECRET'),
+        'redirect' => env('FB_CALLBACK_URL'),
+    ],
+
+    'github' => [
+        'client_id' => env('GH_APP_ID'),
+        'client_secret' => env('GH_APP_SECRET'),
+        'redirect' => env('GH_CALLBACK_URL'),
+    ],
+
+    'goolge' => [
+        'client_id' => env('GOOGLE_APP_ID'),
+        'client_secret' => env('GOOGLE_APP_SECRET'),
+        'redirect' => env('GOOGLE_CALLBACK_URL'),
+    ],
+
 ];

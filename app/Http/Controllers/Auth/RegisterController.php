@@ -74,6 +74,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'provider' => 'email',
         ]);
         return $user;
     }
@@ -82,7 +83,7 @@ class RegisterController extends Controller
     {
         $token = $user->createToken('ApiKey')->plainTextToken;
         SendRegistrationUserEmailJob::dispatch($user, $request->get('password'));
-        Session::put('error', _('main.api_create') . $token);
+        Session::put('error', __('main.api_create') . $token);
     }
 
 }

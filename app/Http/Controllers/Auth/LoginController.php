@@ -46,5 +46,11 @@ class LoginController extends Controller
         ]);
     }
 
+    protected function credentials(Request $request)
+    {
+        $request->merge(['provider' => 'email']);
+        return $request->only($this->username(), 'password', 'provider');
+    }
+
 
 }

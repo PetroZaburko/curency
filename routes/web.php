@@ -18,6 +18,8 @@ Route::group(['middleware' => 'guest'], function (){
     Route::post('login', 'Auth\LoginController@login');
     Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Auth\RegisterController@register');
+    Route::get('login/{provider}', 'Auth\ExternalAuthController@redirectToProvider')->name('external.auth');
+    Route::get('login/{provider}/callback', 'Auth\ExternalAuthController@handleProviderCallback')->name('external.auth.callback');
 });
 
 Route::group(['middleware' => 'auth'], function() {
