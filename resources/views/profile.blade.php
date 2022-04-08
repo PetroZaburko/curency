@@ -23,6 +23,10 @@
                 <i class="fas fa-file-pdf"></i>
                 @lang('main.convert_pdf')
             </button>
+            <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('xlsx')}}';">
+                <i class="fas fa-file-excel"></i>
+                @lang('main.convert_xlsx')
+            </button>
             <button type="button" class="list-group-item list-group-item-action" onclick="location.href = '{{route('tokens')}}';">
                 <i class="fas fa-key"></i>
                 @lang('main.api_key')

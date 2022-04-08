@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\RatesExport;
 use App\Rate;
 use App\Token;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -31,5 +33,10 @@ class UserController extends Controller
         $date = $rates->max('created_at')->format('d-m-Y');
         $pdf = Pdf::loadView('pdf.currency', compact('rates', 'date'));
         return $pdf->download('currency_' . $date . '.pdf');
+    }
+
+    public function xlsx(Rate $rate)
+    {
+        return Excel::download(new RatesExport($rate), 'currency.xlsx');
     }
 }

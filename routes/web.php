@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::view('profile', 'profile')->name('profile');
     Route::get('tokens', 'UserController@tokens')->name('tokens');
     Route::get('pdf', 'UserController@pdf')->name('pdf');
+    Route::get('xlsx', 'UserController@xlsx')->name('xlsx');
     Route::get('language', 'LocaleController@show')->name('locale.show');
     Route::post('language', 'LocaleController@authSave')->name('locale.auth.save');
     Route::get('/regenerate/{token}', 'UserController@regenerate')->name('regenerate');

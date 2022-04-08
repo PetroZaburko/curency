@@ -168,6 +168,7 @@ return [
         Jenssegers\Mongodb\MongodbServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];
