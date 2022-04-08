@@ -13,6 +13,7 @@ return [
     'ch_password' => 'Change password',
     'ch_language' => 'Language settings',
     'convert_pdf' => 'Convert to PDF',
+    'convert_xlsx' => 'Convert to XLSX',
     'api_key' => 'Api key',
 
     'your_keys' => 'Your api keys',

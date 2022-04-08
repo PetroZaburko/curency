@@ -13,6 +13,7 @@ return [
     'ch_password' => 'Змінити пароль',
     'ch_language' => 'Налаштування мови',
     'convert_pdf' => 'Конвертація у PDF',
+    'convert_xlsx' => 'Конвертація у XLSX',
     'api_key' => 'Api ключ',
 
     'your_keys' => 'Ваші api ключі',
