@@ -12,7 +12,10 @@ class RateEnterprise extends Rate
 
     public function updateDB($object)
     {
-        return $this->updateFromAPI($object);
+        if ($result = $this->updateFromAPI($object)) {
+            $this->makeAllLastUpdatedCache();
+        }
+        return $result;
     }
 
     protected function updateFromAPI(CurrencyIterator $iterator)

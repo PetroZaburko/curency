@@ -3,8 +3,10 @@
 namespace App;
 
 use App\Collections\CustomRateCollection;
+use App\Observers\RateObserver;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 abstract class Rate extends Model
@@ -32,11 +34,29 @@ abstract class Rate extends Model
         $this->attributes['currency_code'] = strtoupper($value);
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+        static::observe(RateObserver::class);
+    }
+
     public function allLastUpdated()
     {
-        return Cache::remember('currency', 60*60*24, function () {
-            return $this->where('created_at', $this->max('created_at')->toDateTime())->get();
+        return Cache::remember($this->table, 60*60*24, function () {
+            return $this->allLastUpdatedNonCached();
         });
+    }
+
+    protected function makeAllLastUpdatedCache()
+    {
+        if (Cache::put($this->table, $this->allLastUpdatedNonCached())) {
+            Log::info("Cache for table {$this->table} was successful created !");
+        }
+    }
+
+    protected function allLastUpdatedNonCached()
+    {
+        return $this->where('created_at', $this->max('created_at')->toDateTime())->get();
     }
 
     protected function saveAll($collection)

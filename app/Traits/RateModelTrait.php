@@ -10,14 +10,17 @@ trait RateModelTrait
 {
     public function updateDB($object)
     {
-        return $this->updateFromTable($object);
+        if ($result = $this->updateFromTable($object)) {
+            $this->makeAllLastUpdatedCache();
+        }
+        return $result;
     }
 
     protected function updateFromTable(Rate $rate)
     {
         try {
             $this->saveAll($rate->allLastUpdated());
-            Log::info("Table $this->table was successful updated from table " . $rate->getTable());
+            Log::info("Table $this->table was successful updated from table {$rate->getTable()} !");
             return true;
         } catch (\Exception $e) {
             Log::error($e->getMessage());

@@ -24,5 +24,4 @@ class ApiRateController extends Controller
         $result = $all->changeRateInCollection($baseCurrency->rate);
         return new RateCollection($result, $base);
     }
-
 }
