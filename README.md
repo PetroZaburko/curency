@@ -1,4 +1,4 @@
-##About
+## About
 
 Web application  that shows rate of different currencies. Developed on framework Laravel, version 6.20. Application functionality:  
 
@@ -24,7 +24,7 @@ Frontend used:
     - Bootstrap 4.3.1
     - jQuery 
 
-##How to configure
+## How to configure
 
 At first you must rename .env.examle file to .env. Then customize general settings at this file.
 You need to set this parameters:
@@ -91,7 +91,7 @@ php artisan rate:update-from-API enterprise
 php artisan rate:update-from-table starter
 php artisan rate:update-from-table free
 ```  
-##How to use
+## How to use
 
 Login page:
 
