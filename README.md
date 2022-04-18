@@ -1,28 +1,27 @@
 ## About
 
-Web application  that shows rate of different currencies. Developed on framework Laravel, version 6.20. Application functionality:  
+Web application  that shows rate of different currencies. Developed on framework Laravel, version 6.20. Application functionality:
+- user authorization/registration
+- alternative user authorization via facebook, google, github
+- multilingual interface (English, Ukrainian)
+- automatic DB updating from different external api sources (cron is used)
+- hybrid usage mongoDB and mySQL databases
+- implemented api (bearer token is used for authentication). The information returns in json format, with the ability to specify the base currency
+- control the number of api requests per month according to the tariff plan
+- data generation in pdf and docx formats
 
-    - user authorization/registration
-    - alternative user authorization via facebook, google, github
-    - multilingual interface (English, Ukrainian)
-    - automatic DB updating from different external api sources (cron is used)
-    - hybrid usage mongoDB and mySQL databases
-    - implemented api (bearer token is used for authentication). The information returns in json format, with the ability to specify the base currency
-    - control the number of api requests per month according to the tariff plan
-    - data generation in pdf and docx formats
 Used packages:
+- jenssegers/mongodb
+- guzzlehttp/guzzle
+- laravel/sanctum
+- laravel/socialite
+- barryvdh/laravel-dompdf
+- maatwebsite/excel
+- phpoffice/phpspreadsheet
 
-    - jenssegers/mongodb
-    - guzzlehttp/guzzle
-    - laravel/sanctum
-    - laravel/socialite
-    - barryvdh/laravel-dompdf
-    - maatwebsite/excel
-    - phpoffice/phpspreadsheet
 Frontend used:
-
-    - Bootstrap 4.3.1
-    - jQuery 
+- Bootstrap 4.3.1
+- jQuery 
 
 ## How to configure
 
