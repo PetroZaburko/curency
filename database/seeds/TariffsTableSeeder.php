@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Tariff;
+use Illuminate\Database\Seeder;
 
 class TariffsTableSeeder extends Seeder
 {
